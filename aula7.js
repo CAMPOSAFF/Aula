@@ -30,3 +30,22 @@ console.log(pessoa4.hobbies)
 //factory ou class são os mais utilizdos
 //facilidade para programar um componente ao longo do programa
 
+//promise e them
+
+const minhapromise = new Promise((resolve,reject)=> {
+    setTimeout(() => {
+        const rand = Math.random()
+        if (rand <0.5){
+            resolve(`Resolvido- $(rand)`)
+        }
+        else {
+            resolve(`Rejeitado- $(rand)`)
+        }
+    }, 1000);
+});
+minhapromise.then(
+    (resultado)=> console.log(resultado)
+).catch(
+    (resultado) => console.log(resultado)
+)
+console.log()
